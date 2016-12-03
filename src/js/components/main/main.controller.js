@@ -3,7 +3,7 @@
   'use strict';
 
   angular
-    .module('myApp.components.main', [])
+    .module('cosmicCalendar.components.main', [])
     .controller('mainController', mainController);
 
   mainController.$inject = ['$scope'];
