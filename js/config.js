@@ -3,12 +3,20 @@
   'use strict';
 
   angular
-    .module('myApp.config', [])
-    .config(appConfig)
-    .run(function($templateCache) {
-      $templateCache.removeAll();
-    });
+    .module('cosmicCalendar.config', [])
+    .config(appConfig);
 
-  function appConfig() {}
+  function appConfig ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: 'js/components/main/main.view.html',
+        controller: 'mainController',
+        controllerAs: 'mainCtrl'
+      })
+      .otherwise({
+        redirectTo: '/'
+      });
+
+  }
 
 })();

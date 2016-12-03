@@ -5,9 +5,13 @@
   'use strict';
 
   angular
-    .module('myApp', [
-      'myApp.config',
-      'myApp.components.main'
+    .module('cosmicCalendar', [
+      'cosmicCalendar.config',
+      'cosmicCalendar.services',
+      'cosmicCalendar.components.navigation',
+      'cosmicCalendar.components.main',
+      'cosmicCalendar.components.timeline',
+      'cosmicCalendar.components.footer'
     ]);
 
 })();
