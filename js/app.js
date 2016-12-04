@@ -11,6 +11,7 @@
       'cosmicCalendar.services',
       'cosmicCalendar.components.navigation',
       'cosmicCalendar.components.landing',
+      'cosmicCalendar.components.about',
       'cosmicCalendar.components.main',
       'cosmicCalendar.components.timeline',
       'cosmicCalendar.components.footer'
