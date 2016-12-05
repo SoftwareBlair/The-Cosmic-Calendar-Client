@@ -9,9 +9,9 @@
   function appConfig ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'js/components/main/main.view.html',
-        controller: 'mainController',
-        controllerAs: 'mainCtrl'
+        templateUrl: 'js/components/months/months.view.html',
+        controller: 'monthsController',
+        controllerAs: 'monthsCtrl'
       })
       .otherwise({
         redirectTo: '/'
