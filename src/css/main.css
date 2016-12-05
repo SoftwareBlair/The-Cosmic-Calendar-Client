@@ -48,35 +48,6 @@ a:focus {
   color: #1d9b6c;
 }
 
-.content-section {
-  padding-top: 0px;
-}
-
-.download-section {
-  height: 400px;
-  width: 100%;
-  padding: 0;
-  color: white;
-  background: url(../images/nebula-3.jpg) no-repeat center center scroll;
-  background-color: black;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-
-@media (min-width: 767px) {
-
-  .content-section {
-    padding-top: 0px;
-  }
-
-  .download-section {
-    padding: 0;
-  }
-
-}
-
 .btn {
   text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;

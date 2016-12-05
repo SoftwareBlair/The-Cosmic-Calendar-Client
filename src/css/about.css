@@ -21,7 +21,7 @@
   height: 250px;
   background-repeat: no-repeat;
   background-position: center center;
-  transition: all 500ms ease;
+  transition: all 1000ms ease;
 }
 
 .accordion ul li div {
@@ -42,7 +42,7 @@
   color: #fff;
   text-decoration: none;
   font-family: Open Sans, sans-serif;
-  transition: all 400ms ease;
+  transition: all 1000ms ease;
 }
 
 .accordion ul li div a * {
@@ -52,12 +52,11 @@
   text-overflow: ellipsis;
   position: relative;
   z-index: 5;
-  white-space: nowrap;
   overflow: hidden;
   -webkit-transform: translateX(-20px);
   transform: translateX(-20px);
-  -webkit-transition: all 400ms ease;
-  transition: all 400ms ease;
+  -webkit-transition: all 1000ms ease;
+  transition: all 1000ms ease;
 }
 
 .accordion ul li div a h2 {
@@ -74,11 +73,11 @@
   font-size: 13.5px;
 }
 
-.accordion ul li:nth-child(1) { background-image: url("../images/moon-1.jpg"); }
+.accordion ul li:nth-child(1) { background-image: url("../images/carl-sagan-1.jpg"); }
 
 .accordion ul li:nth-child(2) { background-image: url("../images/starry-sky.jpg"); }
 
-.accordion ul li:nth-child(3) { background-image: url("../images/nebula-1.jpg"); }
+.accordion ul li:nth-child(3) { background-image: url("../images/Neil-deGrasse-Tyson-1.jpg"); }
 
 .accordion ul:hover li { width: 8%; }
 
