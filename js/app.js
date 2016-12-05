@@ -12,8 +12,8 @@
       'cosmicCalendar.components.navigation',
       'cosmicCalendar.components.landing',
       'cosmicCalendar.components.about',
-      'cosmicCalendar.components.main',
-      'cosmicCalendar.components.timeline',
+      'cosmicCalendar.components.months',
+      'cosmicCalendar.components.share',
       'cosmicCalendar.components.footer'
     ]);
 
