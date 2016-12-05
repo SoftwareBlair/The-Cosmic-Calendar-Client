@@ -4,55 +4,14 @@
       <div class="col-md-4">
 
         <dl class="list month-select text-center">
-          <dd><a href="#">January</a></dd>
-          <dd><a href="#">February</a></dd>
-          <dd><a href="#">March</a></dd>
-          <dd><a href="#">April</a></dd>
-          <dd><a href="#">May</a></dd>
-          <dd><a href="#">June</a></dd>
-          <dd><a href="#">July</a></dd>
-          <dd><a href="#">August</a></dd>
-          <dd><a href="#">September</a></dd>
-          <dd><a href="#">October</a></dd>
-          <dd><a href="#">November</a></dd>
-          <dd><a href="#">December</a></dd>
+          <dd ng-repeat="month in monthsCtrl.months"><a href="" ng-click="monthsCtrl.getMonth(month.id)">{{ month.month }}</a></dd>
         </dl>
 
       </div>
 
-      <div class="col-md-8">
+      <div class="col-md-8 days-view">
         <ul class="col-md-12">
-          <a href="#"><li class="col-md-4 days">1</li></a>
-          <a href="#"><li class="col-md-4 days">2</li></a>
-          <a href="#"><li class="col-md-4 days">3</li></a>
-          <a href="#"><li class="col-md-4 days">4</li></a>
-          <a href="#"><li class="col-md-4 days">5</li></a>
-          <a href="#"><li class="col-md-4 days">6</li></a>
-          <a href="#"><li class="col-md-4 days">7</li></a>
-          <a href="#"><li class="col-md-4 days">8</li></a>
-          <a href="#"><li class="col-md-4 days">9</li></a>
-          <a href="#"><li class="col-md-4 days">10</li></a>
-          <a href="#"><li class="col-md-4 days">11</li></a>
-          <a href="#"><li class="col-md-4 days">13</li></a>
-          <a href="#"><li class="col-md-4 days">13</li></a>
-          <a href="#"><li class="col-md-4 days">14</li></a>
-          <a href="#"><li class="col-md-4 days">15</li></a>
-          <a href="#"><li class="col-md-4 days">16</li></a>
-          <a href="#"><li class="col-md-4 days">17</li></a>
-          <a href="#"><li class="col-md-4 days">18</li></a>
-          <a href="#"><li class="col-md-4 days">19</li></a>
-          <a href="#"><li class="col-md-4 days">20</li></a>
-          <a href="#"><li class="col-md-4 days">21</li></a>
-          <a href="#"><li class="col-md-4 days">22</li></a>
-          <a href="#"><li class="col-md-4 days">23</li></a>
-          <a href="#"><li class="col-md-4 days">24</li></a>
-          <a href="#"><li class="col-md-4 days">25</li></a>
-          <a href="#"><li class="col-md-4 days">26</li></a>
-          <a href="#"><li class="col-md-4 days">27</li></a>
-          <a href="#"><li class="col-md-4 days">28</li></a>
-          <a href="#"><li class="col-md-4 days">29</li></a>
-          <a href="#"><li class="col-md-4 days">30</li></a>
-          <a href="#"><li class="col-md-4 days">31</li></a>
+          <a ng-repeat="day in monthsCtrl.currentDaysMonth track by $index" ng-click=""><li class="col-md-4 days">{{ $index + 1}}</li></a>
         </ul>
       </div>
     </div>
