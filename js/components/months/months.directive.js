@@ -11,7 +11,9 @@
   function MonthsDirective () {
     return {
       restrict: 'E',
-      templateUrl: './js/components/months/months.view.html'
+      templateUrl: './js/components/months/months.view.html',
+      controller: 'monthsController',
+      controllerAs: 'monthsCtrl'
     };
   }
 

@@ -66,6 +66,11 @@
   transform-origin: 110% 25%;
 }
 
+.days-view {
+  margin: -25px 0 0;
+  padding: 30px;
+}
+
 .days {
   height: 115px;
   width: 115px;
@@ -77,7 +82,7 @@
 
 .days:hover {
   background: rgba(0, 0, 0, 0.7);
-  -webkit-box-shadow: 8px 8px 65px 0px rgba(0,0,0,0.46);
-  -moz-box-shadow: 8px 8px 65px 0px rgba(0,0,0,0.46);
-  box-shadow: 8px 8px 65px 0px rgba(0,0,0,0.46);
+  -webkit-box-shadow: 8px 8px 50px 0px rgba(0,0,0,0.46);
+  -moz-box-shadow: 8px 8px 50px 0px rgba(0,0,0,0.46);
+  box-shadow: 8px 8px 50px 0px rgba(0,0,0,0.46);
 }

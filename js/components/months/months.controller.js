@@ -6,11 +6,30 @@
     .module('cosmicCalendar.components.months', [])
     .controller('monthsController', monthsController);
 
-  monthsController.$inject = ['$scope'];
+  monthsController.$inject = ['$scope', 'calendarService'];
 
-  function monthsController($scope) {
+  function monthsController($scope, calendarService) {
     /*jshint validthis: true */
-    this.greeting = 'Hello World!';
+    calendarService.getAllMonths()
+    .then(months => {
+      this.months = months.data.data;
+      this.currentDaysMonth = null;
+
+      this.getMonth = function (month) {
+        let monthID = parseInt(month);
+        this.months.forEach((data) => {
+          if (monthID === data.id) {
+            this.currentDaysMonth = new Array(data.num_days);
+          }
+        });
+      };
+
+    })
+    .catch(err => console.log(err));
+
+    calendarService.getAllEvents()
+    .then(events => console.log(events.data.data))
+    .catch(err => console.log(err));
   }
 
 })();
