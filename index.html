@@ -24,6 +24,7 @@
     <link rel="stylesheet" type="text/css" href="css/navigation.css">
     <link rel="stylesheet" type="text/css" href="css/landing.css">
     <link rel="stylesheet" type="text/css" href="css/about.css">
+    <link rel="stylesheet" type="text/css" href="css/months.css">
 
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -43,14 +44,35 @@
     <cd-about></cd-about>
 
     <!-- Months Section -->
-    <section id="months" class="content-section text-center">
-      <div class="download-section">
+    <section id="months">
+      <div class="months-section">
+
+        <div class="container-fluid">
+          <div class="col-md-4">
+
+            <dl class="list month-select">
+              <dd><a href="#">January</a></dd>
+              <dd><a href="#">February</a></dd>
+              <dd><a href="#">March</a></dd>
+              <dd><a href="#">April</a></dd>
+              <dd><a href="#">May</a></dd>
+              <dd><a href="#">June</a></dd>
+              <dd><a href="#">July</a></dd>
+              <dd><a href="#">August</a></dd>
+              <dd><a href="#">September</a></dd>
+              <dd><a href="#">October</a></dd>
+              <dd><a href="#">November</a></dd>
+              <dd><a href="#">December</a></dd>
+            </dl>
+
+          </div>
+        </div>
 
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="share" class="container content-section text-center">
+    <section id="share" class="container text-center">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
           <h2>Please Share The Cosmic Calendar</h2>
@@ -109,6 +131,38 @@
     <!-- Footer Component -->
     <script type="text/javascript" src="js/components/footer/footer.config.js"></script>
     <script type="text/javascript" src="js/components/footer/footer.directive.js"></script>
+
+    <script type="text/javascript">
+    $(function() {
+      $('.material-card > .mc-btn-action').click(function () {
+          var card = $(this).parent('.material-card');
+          var icon = $(this).children('i');
+          icon.addClass('fa-spin-fast');
+
+          if (card.hasClass('mc-active')) {
+              card.removeClass('mc-active');
+
+              window.setTimeout(function() {
+                  icon
+                      .removeClass('fa-arrow-left')
+                      .removeClass('fa-spin-fast')
+                      .addClass('fa-bars');
+
+              }, 800);
+          } else {
+              card.addClass('mc-active');
+
+              window.setTimeout(function() {
+                  icon
+                      .removeClass('fa-bars')
+                      .removeClass('fa-spin-fast')
+                      .addClass('fa-arrow-left');
+
+              }, 800);
+          }
+      });
+  });
+    </script>
 
   </body>
 </html>
