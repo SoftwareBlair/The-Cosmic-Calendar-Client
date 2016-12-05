@@ -65,3 +65,19 @@
   -o-transform-origin: 110% 25%;
   transform-origin: 110% 25%;
 }
+
+.days {
+  height: 115px;
+  width: 115px;
+  margin: 5px;
+  list-style: none;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.days:hover {
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 8px 8px 65px 0px rgba(0,0,0,0.46);
+  -moz-box-shadow: 8px 8px 65px 0px rgba(0,0,0,0.46);
+  box-shadow: 8px 8px 65px 0px rgba(0,0,0,0.46);
+}
