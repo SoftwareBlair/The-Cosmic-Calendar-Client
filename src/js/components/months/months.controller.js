@@ -12,24 +12,32 @@
     /*jshint validthis: true */
     calendarService.getAllMonths()
     .then(months => {
-      this.months = months.data.data;
+      this.allMonths = months.data.data;
       this.currentDaysMonth = null;
+      this.currentMonth = null;
 
       this.getMonth = function (month) {
+        console.log(month);
         let monthID = parseInt(month);
-        this.months.forEach((data) => {
+        this.allMonths.forEach((data) => {
           if (monthID === data.id) {
+            this.currentMonth = data.month;
             this.currentDaysMonth = new Array(data.num_days);
           }
         });
       };
-
     })
-    .catch(err => console.log(err));
+    .catch(err => err);
 
     calendarService.getAllEvents()
-    .then(events => console.log(events.data.data))
-    .catch(err => console.log(err));
+    .then((events) => {
+      this.allEvents = events.data.data;
+
+      this.getEvent = function (event) {
+        event.forEach(data => console.log(data));
+      };
+    })
+    .catch(err => err);
   }
 
 })();

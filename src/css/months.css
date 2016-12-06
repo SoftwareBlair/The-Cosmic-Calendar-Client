@@ -67,8 +67,12 @@
 }
 
 .days-view {
-  margin: -25px 0 0;
-  padding: 30px;
+  margin: -100px 0 0;
+  padding: 40px;
+}
+
+.days-view h2 {
+  margin-left: -120px;
 }
 
 .days {
