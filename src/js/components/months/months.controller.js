@@ -25,19 +25,33 @@
             this.currentDaysMonth = new Array(data.num_days);
           }
         });
+        calendarService.getMonthEvents(monthID)
+        .then((event) => {
+          let monthEvents = event.data.data;
+          let daysMonth = this.currentDaysMonth;
+
+          this.getEvent = function (day) {
+            monthEvents.forEach((data) => {
+              if (day === data.day) {
+                console.log(data);
+              }
+            });
+          };
+        });
       };
     })
     .catch(err => err);
 
-    calendarService.getAllEvents()
-    .then((events) => {
-      this.allEvents = events.data.data;
+    // calendarService.getAllEvents()
+    // .then((events) => {
+    //   this.allEvents = events.data.data;
+    //
+    //   this.getEvent = function (event) {
+    //     event.forEach(data => console.log(data));
+    //   };
+    // })
+    // .catch(err => err);
 
-      this.getEvent = function (event) {
-        event.forEach(data => console.log(data));
-      };
-    })
-    .catch(err => err);
   }
 
 })();

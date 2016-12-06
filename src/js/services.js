@@ -13,6 +13,8 @@
     const getAllData = 'https://cosmic-calendar.herokuapp.com/api/v1/';
     const getAllMonths = 'https://cosmic-calendar.herokuapp.com/api/v1/months';
     const getAllEvents = 'https://cosmic-calendar.herokuapp.com/api/v1/events';
+    const getMonthEvents = 'https://cosmic-calendar.herokuapp.com/api/v1/events/month/';
+    const getGitHub = 'https://api.github.com/users/brandonb81';
 
     this.getAllData = function  () {
       return $http.get(getAllData);
@@ -24,6 +26,10 @@
 
     this.getAllEvents = function () {
       return $http.get(getAllEvents);
+    };
+
+    this.getMonthEvents = function (id) {
+      return $http.get(getMonthEvents + id);
     };
   }
 

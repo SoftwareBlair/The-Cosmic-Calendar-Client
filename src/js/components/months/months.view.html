@@ -13,10 +13,10 @@
         <ul class="col-md-12">
 
           <h2 class="text-center">{{ monthsCtrl.currentMonth }}</h2>
-          <a ng-repeat="day in monthsCtrl.currentDaysMonth track by $index" ng-click="monthsCtrl.getEvent(monthsCtrl.allEvents)">
-            <li class="col-md-4 days">{{ $index + 1}}</li>
+          <a ng-repeat="day in monthsCtrl.currentDaysMonth track by $index" ng-click="monthsCtrl.getEvent($index + 1)">
+            <li class="col-md-4 days">{{ $index + 1 }}</li>
           </a>
-          
+
         </ul>
       </div>
     </div>
