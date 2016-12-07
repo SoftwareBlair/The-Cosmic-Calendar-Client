@@ -4,7 +4,13 @@
       <div class="col-md-4">
 
         <dl class="list month-select text-center">
-          <dd ng-repeat="month in monthsCtrl.allMonths"><a href="" ng-click="monthsCtrl.getMonth(month.id)">{{ month.month }}</a></dd>
+          <dd ng-repeat="month in monthsCtrl.allMonths">
+
+            <a ng-click="monthsCtrl.getMonth(month.id)"
+               ng-class="{'month-if': month.monthHasEvents === false}">{{ month.month }}
+            </a>
+
+          </dd>
         </dl>
 
       </div>
@@ -13,8 +19,15 @@
         <ul class="col-md-12">
 
           <h2 class="text-center">{{ monthsCtrl.currentMonth }}</h2>
-          <a ng-repeat="day in monthsCtrl.currentDaysMonth track by $index" ng-click="monthsCtrl.getEvent($index + 1)">
-            <li class="col-md-4 days">{{ $index + 1 }}</li>
+
+          <a ng-repeat="day in monthsCtrl.currentDaysMonth track by $index"
+             ng-click="monthsCtrl.getEvent($index + 1)">
+
+            <li class="col-md-4"
+              ng-class="{'day-if': monthsCtrl.dayHasEvents === false}">
+              {{ $index + 1 }}
+            </li>
+
           </a>
 
         </ul>
