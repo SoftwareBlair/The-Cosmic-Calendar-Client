@@ -20,6 +20,10 @@
     padding: 30px;
 }
 
+.overlay-content p {
+  /*text-align: justify;*/
+}
+
 .overlay a {
     padding: 8px;
     text-decoration: none;
