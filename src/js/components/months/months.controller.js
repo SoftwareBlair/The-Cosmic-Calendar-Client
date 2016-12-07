@@ -13,10 +13,6 @@
     calendarService.getAllMonths()
     .then(months => {
       this.allMonths = months;
-      this.currentDaysMonth = null;
-      this.currentMonth = null;
-      this.monthHasEvents = false;
-      this.dayHasEvents = false;
 
       this.getMonth = (month) => {
         let monthID = parseInt(month);
@@ -31,12 +27,24 @@
         .then(event => {
           let monthEvents = event;
 
+          for (let i = 0; i < monthEvents.length; i++) {
+            this.currentDaysMonth.splice(monthEvents[i].day - 1, 1, monthEvents[i]);
+          }
+
+          this.closeNav = () => {
+            document.getElementById("overlayData").style.width = "0%";
+          };
+
           this.getEvent = (day) => {
+            document.getElementById("overlayData").style.width = "100%";
+
+            this.singleDayEvents = [];
             monthEvents.forEach(data => {
               if (day === data.day) {
-                console.log(data);
+                this.singleDayEvents.push(data);
               }
             });
+            console.log(this.singleDayEvents);
           };
         });
       };
