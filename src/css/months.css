@@ -50,7 +50,15 @@
 }
 
 .month-select dd, .month-select a { background: rgba(0, 0, 0, 0.3); }
-.month-select a:hover { background: rgba(0, 0, 0, 0.7); }
+.month-select a:hover { background: rgba(0, 0, 0, 0.6); }
+
+.month-select a.month-if,
+.month-select a.month-if:hover,
+.days-view ul a li.day-if {
+  background: rgba(0, 0, 0, 0.8);
+  text-indent: 0;
+  cursor: not-allowed;
+}
 
 .month-select {
   -webkit-transform: perspective(2160px) rotateY(40deg) !important;
@@ -75,7 +83,7 @@
   margin-left: -120px;
 }
 
-.days {
+.days-view ul a li {
   height: 115px;
   width: 115px;
   margin: 5px;
