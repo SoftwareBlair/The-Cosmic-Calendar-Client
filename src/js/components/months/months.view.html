@@ -7,7 +7,8 @@
           <dd ng-repeat="month in monthsCtrl.allMonths">
 
             <a ng-click="monthsCtrl.getMonth(month.id)"
-               ng-class="{'month-if': month.monthHasEvents === false}">{{ month.month }}
+               ng-class="{'month-if': month.monthHasEvents === false}">
+               {{ month.month }}
             </a>
 
           </dd>
