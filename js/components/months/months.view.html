@@ -25,14 +25,26 @@
              ng-click="monthsCtrl.getEvent($index + 1)">
 
             <li class="col-md-4"
-              ng-class="{'day-if': monthsCtrl.dayHasEvents === false}">
+              ng-class="{'day-if': !day}">
               {{ $index + 1 }}
             </li>
 
           </a>
 
         </ul>
+
       </div>
+
+      <div id="overlayData" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" ng-click="monthsCtrl.closeNav()">&times;</a>
+        <div class="overlay-content">
+          <div class="col-sm-12" ng-repeat="event in monthsCtrl.singleDayEvents">
+            <h2 class="col-sm-12 text-center">{{ event.title }}</h2>
+            <p>{{ event.description }}</p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
 </section>
