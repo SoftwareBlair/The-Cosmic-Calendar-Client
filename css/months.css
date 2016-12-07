@@ -50,7 +50,10 @@
 }
 
 .month-select dd, .month-select a { background: rgba(0, 0, 0, 0.3); }
-.month-select a:hover { background: rgba(0, 0, 0, 0.6); }
+.month-select a:hover {
+  background: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
 
 .month-select a.month-if,
 .month-select a.month-if:hover,
