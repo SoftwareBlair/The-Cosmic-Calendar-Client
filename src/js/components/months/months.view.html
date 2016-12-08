@@ -38,9 +38,12 @@
       <div id="overlayData" class="overlay">
         <a href="javascript:void(0)" class="closebtn" ng-click="monthsCtrl.closeNav()">&times;</a>
         <div class="overlay-content">
-          <div class="col-sm-12" ng-repeat="event in monthsCtrl.singleDayEvents">
+          <div class="col-sm-12" ng-repeat="event in monthsCtrl.singleDayEvents | orderBy: 'time'">
             <h2 class="col-sm-12 text-center">{{ event.title }}</h2>
+            <h4 class="col-sm-12 text-center">{{ event.cosmic_year }} {{ event.year_abrv }}, {{ event.time }}</h4>
             <p class="text-center">{{ event.description }}</p>
+            <a class="text-center" style="font-size: 18px" target="_blank" href="{{ event.source_url }}">More Information</a>
+            <hr>
           </div>
         </div>
       </div>

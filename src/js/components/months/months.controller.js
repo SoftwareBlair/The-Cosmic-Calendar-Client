@@ -32,11 +32,13 @@
           }
 
           this.closeNav = () => {
-            document.getElementById("overlayData").style.width = "0%";
+            document.getElementById('overlayData').style.width = '0%';
+            document.body.classList.toggle('noscroll');
           };
 
           this.getEvent = (day) => {
-            document.getElementById("overlayData").style.width = "100%";
+            document.getElementById('overlayData').style.width = '100%';
+            document.body.classList.toggle('noscroll');
 
             this.singleDayEvents = [];
             monthEvents.forEach(data => {
@@ -44,7 +46,6 @@
                 this.singleDayEvents.push(data);
               }
             });
-            console.log(this.singleDayEvents);
           };
         });
       };
